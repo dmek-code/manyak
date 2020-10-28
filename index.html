@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+
+  <head>
+  	<link rel="stylesheet" href="css/style.css">
+  	<link rel="stylesheet" href="css/responsive.css">
+  	<link rel="stylesheet" href="css/darkmode.css">
+    <META name="viewport" content="width=device-width,initial-scale=1.0" />    
+  	<meta name="keywords" content="Bildergalerie, Torsten">
+  	<title>Foto-Galerie</title>
+    <script src="js/darkmode.js"></script>
+
+
+    <script>
+      function toggleFavoriten() {
+        favoritenbilder = document.querySelectorAll("#galerie > img:not(.favorit)");
+        	Array.from(favoritenbilder).forEach((el) => {
+                  el.classList.toggle("nichtsichtbar");
+              });
+      }   
+      
+      function BildGroesseAendern(breite) {
+        bilder = document.querySelectorAll("#galerie > img");
+        	Array.from(bilder).forEach((el) => {
+            el.style.width = 
+                  el.style.width = breite + "px";
+              });
+      }
+      function BildGroesser() {
+        bilder = document.querySelectorAll("#galerie > img");
+        	Array.from(bilder).forEach((el) => {
+                  el.style.width = (el.width*1.1) + "px";
+              });        
+      }
+      function BildKleiner() {
+        bilder = document.querySelectorAll("#galerie > img");
+        	Array.from(bilder).forEach((el) => {
+                  el.style.width = (el.width*0.9) + "px";
+              });        
+      }
+    </script>
+    
+  </head>
+  
+  <body class="darkmoddable">
+
+    <h1 class="darkmoddable">Foto-Galerie</h1>
+
+    <div id="iconleiste" class="darkmoddable">
+    
+    	<button id="button_darkmode" 
+                class="iconleiste_buttons darkmoddable" 
+                onclick='toggleDarkmode();'>
+          <div class="buttontext">Darkmode on</div>
+        </button>
+        
+    	<button class="iconleiste_buttons darkmoddable" 
+                id="button_favoriten"
+                onclick='toggleFavoriten();'>
+          <div class="buttontext">Nur Favoriten</div>
+        </button>
+        
+        <button class="groessenaenderer" onclick="BildGroesseAendern(600);"> <!--Onclick ebenfalls wichtig!!-->
+          <div class="buttontext">L</div>
+         </button>
+        <button class="groessenaenderer" onclick="BildGroesseAendern(400);">
+          <div class="buttontext">M</div> 
+        </button>
+        <button class="groessenaenderer" onclick="BildGroesseAendern(200);"> 
+          <div class="buttontext">S</div>
+        </button>
+        <button class="groessenaenderer" onclick="BildGroesser();">
+          <div class="buttontext">+</div>
+        </button>
+        <button class="groessenaenderer" onclick="BildKleiner();">
+          <div class="buttontext">-</div>
+        </button>
+    </div>
+
+    
+    <div id="galerie">
+		<img src="img/img1.jpeg" class="darkmoddable">
+		<img src="img/img2.jpeg" class="darkmoddable">
+		<img src="img/img3.jpeg" class="favorit darkmoddable">
+		<img src="img/img4.jpeg" class="darkmoddable">
+		<img src="img/img5.jpeg" class="favorit darkmoddable">
+		<img src="img/img6.jpeg" class="darkmoddable">
+		<img src="img/img7.jpeg" class="darkmoddable"> 
+    </div>
+
+    
+  </body>
+
+</html>

@@ -1,0 +1,36 @@
+
+body.darkmode {
+    background-color:#333333;
+}
+
+h1.darkmode {
+    color:#999999;
+}
+
+#iconleiste.darkmode {
+    background-color: black!important;
+}
+
+
+#iconleiste > button:hover.darkmode {
+	background-color:#F19F8E!important;
+	cursor:move;
+}
+
+.iconleiste_buttons.darkmode {
+    background-color:#555555!important;
+}
+
+#iconleiste_favoriten.darkmode {
+    background-color:#F19F8E!important;
+}
+
+
+#galerie > img.darkmode {
+    border: solid 3px #999999;
+}
+
+    
+.favorit.darkmode {
+    border-color: #F19F8E!important;
+}

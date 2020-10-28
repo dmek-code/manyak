@@ -1,0 +1,30 @@
+@media (max-width: 1000px)  {
+
+ 
+
+  #galerie > img { width:48%; }
+ 
+}
+
+ 
+
+
+@media (max-width: 710px)  {
+
+ 
+
+  .buttontext { display:none; }
+  .groessenaenderer > .buttontext { display:block; margin-top:0;}
+  .groessenaenderer { padding:0 10px!important; }
+  
+  #iconleiste > button { 
+    border-top-right-radius:3px;
+    padding-right:0;  
+  }  
+
+ 
+
+  #galerie > img { width:99%; }
+  #iconleiste {width: 98.5%;}
+   
+}

@@ -1,0 +1,89 @@
+body {
+	background-color: #dddddd;
+	font-family:verdana,arial,helvetica;
+}
+
+
+#iconleiste {
+	background-color:blue; /*obere menüleiste*/
+	margin: 10px 0px;
+	border-radius: 5px;
+	padding: 5px;
+	margin-right:5px;
+}
+@media (max-width:600px) {
+	body{
+
+	}
+}
+
+
+#iconleiste > button { /*Darkmode Button*/
+	background-color: red;
+	border: none;
+	color: white;
+	border-radius: 3px;
+	border-top-right-radius:20px;
+	font-size: 12pt;
+	height: 30px;
+	text-align: left;
+	padding: 0 20px 0 20px; /* oben und unten 0, rechts und links 20px (im Uhrzeigersinn) */
+}
+
+#iconleiste > button:hover { /*wichtig??*/
+	background-color:black;
+	cursor:pointer;
+}
+
+#button_darkmode {
+	background-image: url("../gfx/bulb.png"); /* Sternsymbol */
+    background-position: 4px -3px;
+	background-repeat: no-repeat;
+	background-size: 27px;
+	padding-left: 35px!important; /* Macht Platz f�r das Icon */
+}
+
+#button_favoriten {
+	background-image: url("../gfx/star.png"); /* Sternsymbol */
+    background-position: 4px 1px;
+	background-repeat: no-repeat;
+	background-size: 27px;
+	background-color:#FF610D!important;
+	padding-left: 35px!important; /* Macht Platz f�r das Icon */
+}
+
+#button_favoriten:hover {
+    background-color:#EF3114!important;
+}
+
+#galerie { 
+	float:left; 
+}
+
+#galerie > img {
+	float:left; 
+	width:300px; 
+	border-radius: 5px;
+	margin-top: 50px ;
+	margin-right: 30px;
+	padding-bottom: 100px;
+	border: solid 3px white;
+}
+
+.favorit {
+	border-color: #FF610D!important;
+}
+
+.nichtsichtbar {
+    display:none!important;
+    border-color:red;
+}
+
+.groessenaenderer {
+    background-color:#929AA9!important;
+    width:30px;
+}
+
+.groessenaenderer:hover {
+    background-color:#B1B5BC!important;
+}
